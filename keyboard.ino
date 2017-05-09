@@ -2,17 +2,15 @@
 
 int loopn = 0;
 
-void setup() {
-  // don't need to set anything up to use DigiKeyboard
-}
+void setup() {}
 
 
 void loop() {
-  if(loopn++ >= 5) {
-    // this is generally not necessary but with some older systems it seems to
-    // prevent missing the first character after a delay:
+  if(loopn++ >= 5) { //Adds one to LoopN, and once it reaches 5, stop.
+    //Compatibillity (next line)
     DigiKeyboard.sendKeyStroke(0);
   
+    //Formatted like this: Use the arrow keys, and then use two mod keys. Delay one and a half seconds. Repeat.
     DigiKeyboard.sendKeyStroke(KEY_ARROW_DOWN, MOD_ALT_LEFT | MOD_CONTROL_LEFT);
     DigiKeyboard.delay(1500);
     DigiKeyboard.sendKeyStroke(KEY_ARROW_RIGHT, MOD_ALT_LEFT | MOD_CONTROL_LEFT);
