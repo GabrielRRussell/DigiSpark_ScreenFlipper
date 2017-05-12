@@ -9,6 +9,8 @@ void loop() {
   if(loopn++ >= 5) { //Adds one to LoopN, and once it reaches 5, stop.
     //Compatibillity (next line)
     DigiKeyboard.sendKeyStroke(0);
+    
+    DigiKeyboard.delay(5000) //Add delay so bad things can't happen when reprogramming.
   
     //Formatted like this: Use the arrow keys, and then use two mod keys. Delay one and a half seconds. Repeat.
     DigiKeyboard.sendKeyStroke(KEY_ARROW_DOWN, MOD_ALT_LEFT | MOD_CONTROL_LEFT);
